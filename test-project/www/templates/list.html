@@ -1,0 +1,36 @@
+<ion-view>
+    <div class="bar bar-subheader">
+        <h2 class="title">Đăng kí thông tin</h2>
+    </div>
+    <ion-content ng-controller="ListCtrl" class="has-header has-subheader">
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Họ và tên đệm</span>
+                <input type="text" placeholder="John aler"/>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Tên</span>
+                <input type="text" placeholder="Suhr"/>
+            </label>
+            <label class="item item-input item-stacked-label" ion-datetime-picker date ng-model='dateofbirth'>
+                <span class="input-label">Ngày sinh</span>
+                <p class="date">{{dateofbirth| date: "dd-MM-yyyy"}}</p>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">CMND/Passport</span>
+                <input type="text" placeholder="385537271"/>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Nơi công tác</span>
+                <input type="text" placeholder="Trường MariCurie" readonly="readonly" class="ion-autocomplete" autocomplete="off" max-selected-items="1" ng-model="model" items-method="callbackMethod(query)"/>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Mức lương</span>
+                <input type="text" placeholder="5 000 000"/>
+            </label>
+        </div>
+        <div class="col-33 col-offset-33">
+            <button class="button button-block button-chocolate">Tiếp tục</button>
+        </div>
+    </ion-content>
+</ion-view>
